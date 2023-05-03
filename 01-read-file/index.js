@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { stdin, stdout, exit, argv } = process;
+const {stdout} = process;
 const stream = fs.createReadStream(path.join('01-read-file', '/text.txt'), 'utf-8');
 
 let data = '';
