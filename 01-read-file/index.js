@@ -6,4 +6,3 @@ const stream = fs.createReadStream(path.join('01-read-file', '/text.txt'), 'utf-
 let data = '';
 
 stream.on('data', chunk => stdout.write(data += chunk));
-stream.on('error', error => console.log('Error', error.message));
