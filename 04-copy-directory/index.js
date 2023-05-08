@@ -6,7 +6,6 @@ let dircopy = path.join(__dirname, 'files-copy');
 
 fs.stat(dircopy, function (err) {
   if (!err) {
-    console.log('Директория есть');
     fs.readdir(dircopy, (err, files) => {
       if (err) throw err;
       for (let file of files) {
@@ -25,7 +24,6 @@ fs.stat(dircopy, function (err) {
       });
     })
   } else if (err.code === 'ENOENT') {
-    console.log('директории нет');
     fs.mkdir(dircopy, err => {
       if (err) throw err;
       fs.readdir(dir, (err, files) => {
